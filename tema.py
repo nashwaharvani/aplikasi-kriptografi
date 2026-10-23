@@ -546,6 +546,16 @@ small,
   box-shadow: 3px 3px 0 var(--arc-yellow) !important;
 }
 
+[data-baseweb="textarea"] {
+  border-color: var(--arc-cyan) !important;
+  background-color: #121738 !important;
+  box-shadow: 5px 5px 0 var(--arc-cyan) !important;
+}
+
+[data-baseweb="textarea"]:focus-within {
+  box-shadow: 5px 5px 0 var(--arc-yellow) !important;
+}
+
 /* Label widget */
 [data-testid="stTextInput"] label,
 [data-testid="stTextArea"] label,
