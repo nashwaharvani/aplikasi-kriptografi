@@ -26,7 +26,7 @@ BERANDA_HTML = """
     box-shadow:5px 5px 0 #111111;
     padding:0.45rem 2.5rem;
     font-family:'Press Start 2P',cursive;
-    font-size:0.55rem;
+    font-size:0.75rem;
     color:#111111;
     letter-spacing:4px;
     margin-bottom:1.25rem;
@@ -57,7 +57,7 @@ BERANDA_HTML = """
     box-shadow:5px 5px 0 #111111;
     padding:0.55rem 2rem;
     font-family:'Press Start 2P',cursive;
-    font-size:0.62rem;
+    font-size:0.78rem;
     color:#111111;
     letter-spacing:2px;
     margin-bottom:2rem;
@@ -108,7 +108,7 @@ SIDEBAR_LOGO_HTML = """
 <div style="
   text-align:center;
   font-family:'Press Start 2P',cursive;
-  font-size:0.55rem;
+  font-size:0.72rem;
   color:#FFD93D;
   text-shadow:2px 2px 0 #111111;
   padding:0.75rem 0.5rem;
@@ -120,7 +120,7 @@ SIDEBAR_LOGO_HTML = """
   line-height:1.8;
 ">
   🕹️ CRYPTO LAB 🕹️<br>
-  <span style="color:#35B6C6; font-size:0.38rem; letter-spacing:2px;">
+  <span style="color:#35B6C6; font-size:0.62rem; letter-spacing:2px;">
     KRIPTOGRAFI · UDINUS
   </span>
 </div>
@@ -262,8 +262,8 @@ section[data-testid="stMain"] > div {
 [data-testid="stMarkdownContainer"] p,
 [data-testid="stMarkdownContainer"] li {
   font-family: 'VT323', monospace !important;
-  font-size: 1.12rem !important;
-  line-height: 1.65 !important;
+  font-size: 1.28rem !important;
+  line-height: 1.55 !important;
   color: var(--pink-lt) !important;
 }
 
@@ -282,9 +282,9 @@ h1,
   text-shadow:
     3px 3px 0 var(--black),
     6px 6px 0 rgba(0,0,0,0.40) !important;
-  font-size: clamp(0.85rem, 2.5vw, 1.55rem) !important;
+  font-size: clamp(1rem, 2.5vw, 1.7rem) !important;
   letter-spacing: 2px !important;
-  line-height: 1.55 !important;
+  line-height: 1.7 !important;
   margin-bottom: 1rem !important;
 }
 
@@ -295,9 +295,9 @@ h2, .stMarkdown h2 {
   font-family: 'Press Start 2P', cursive !important;
   color: var(--arc-cyan) !important;
   text-shadow: 2px 2px 0 var(--black) !important;
-  font-size: clamp(0.62rem, 1.8vw, 0.92rem) !important;
+  font-size: clamp(0.78rem, 1.8vw, 1.05rem) !important;
   letter-spacing: 1px !important;
-  line-height: 1.6 !important;
+  line-height: 1.75 !important;
   border-bottom: 3px solid var(--arc-cyan);
   padding-bottom: 0.5rem;
   margin-bottom: 1rem !important;
@@ -307,15 +307,15 @@ h3, .stMarkdown h3 {
   font-family: 'Press Start 2P', cursive !important;
   color: var(--arc-yellow) !important;
   text-shadow: 2px 2px 0 var(--black) !important;
-  font-size: clamp(0.52rem, 1.4vw, 0.78rem) !important;
-  line-height: 1.65 !important;
+  font-size: clamp(0.68rem, 1.4vw, 0.92rem) !important;
+  line-height: 1.75 !important;
   margin-bottom: 0.75rem !important;
 }
 
 h4, .stMarkdown h4 {
   font-family: 'Press Start 2P', cursive !important;
   color: var(--arc-orange) !important;
-  font-size: clamp(0.46rem, 1.2vw, 0.68rem) !important;
+  font-size: clamp(0.62rem, 1.2vw, 0.82rem) !important;
   line-height: 1.65 !important;
   margin-bottom: 0.5rem !important;
 }
@@ -326,8 +326,8 @@ small,
 [data-testid="stCaptionContainer"],
 [data-testid="stCaptionContainer"] p {
   font-family: 'VT323', monospace !important;
-  font-size: 0.95rem !important;
-  color: #AAAACC !important;
+  font-size: 1.08rem !important;
+  color: #D0D7F4 !important;
 }
 
 /* ================================================================
@@ -347,8 +347,8 @@ small,
 [data-testid="stSidebar"] [data-testid="stCaptionContainer"] p,
 [data-testid="stSidebar"] small {
   font-family: 'VT323', monospace !important;
-  font-size: 0.82rem !important;
-  color: #5A5F88 !important;
+  font-size: 1.02rem !important;
+  color: #D0D7F4 !important;
   text-align: center !important;
   display: block;
 }
@@ -356,7 +356,7 @@ small,
 /* Label pilihan navigasi (radio) di sidebar */
 [data-testid="stSidebar"] [data-testid="stRadio"] label {
   font-family: 'VT323', monospace !important;
-  font-size: 1.05rem !important;
+  font-size: 1.18rem !important;
   color: var(--pink-lt) !important;
   padding: 0.5rem 0.75rem !important;
   display: block;
@@ -382,6 +382,12 @@ small,
   box-shadow: 3px 3px 0 var(--black) !important;
 }
 
+[data-testid="stSidebar"] [data-testid="stRadio"] label:has(input:checked) p,
+[data-testid="stSidebar"] [data-testid="stRadio"] label:has(input:checked) span {
+  color: var(--black) !important;
+  text-shadow: none !important;
+}
+
 [data-testid="stSidebar"] hr {
   border: none !important;
   border-top: 2px solid #232750 !important;
@@ -392,10 +398,10 @@ small,
    TOMBOL UTAMA — Arcade tebal, shadow keras, efek klik geser
    ================================================================ */
 .stButton > button {
-  font-family: 'Press Start 2P', cursive !important;
-  font-size: 0.50rem !important;
+  font-family: 'VT323', monospace !important;
+  font-size: 1.15rem !important;
   background-color: var(--arc-red) !important;
-  color: #FFFFFF !important;
+  color: var(--black) !important;
   border: 3px solid var(--black) !important;
   border-radius: 0 !important;
   box-shadow: 5px 5px 0 var(--black) !important;
@@ -426,6 +432,7 @@ small,
 /* Tombol primary khusus (Enkripsi) */
 .stButton > button[kind="primary"] {
   background-color: var(--arc-pink) !important;
+  color: var(--black) !important;
 }
 .stButton > button[kind="primary"]:hover {
   background-color: var(--arc-yellow) !important;
@@ -436,8 +443,8 @@ small,
    DOWNLOAD BUTTON
    ================================================================ */
 [data-testid="stDownloadButton"] > button {
-  font-family: 'Press Start 2P', cursive !important;
-  font-size: 0.46rem !important;
+  font-family: 'VT323', monospace !important;
+  font-size: 1.15rem !important;
   background-color: var(--arc-blue) !important;
   color: #FFFFFF !important;
   border: 3px solid var(--black) !important;
@@ -472,15 +479,15 @@ small,
 }
 
 [data-baseweb="tab"] {
-  font-family: 'Press Start 2P', cursive !important;
-  font-size: 0.38rem !important;
+  font-family: 'VT323', monospace !important;
+  font-size: 1.2rem !important;
   color: var(--pink-lt) !important;
   background-color: var(--navy-dark) !important;
   border-right: 3px solid var(--black) !important;
   border-radius: 0 !important;
   padding: 0.75rem 0.9rem !important;
   letter-spacing: 0.5px !important;
-  line-height: 1.6 !important;
+  line-height: 1.4 !important;
   transition: background-color 0.08s, color 0.08s !important;
 }
 
@@ -498,6 +505,10 @@ small,
   background-color: var(--arc-yellow) !important;
   color: var(--black) !important;
   border-bottom: 3px solid var(--arc-yellow) !important;
+}
+
+[data-baseweb="tab"][aria-selected="true"] * {
+  color: var(--black) !important;
 }
 
 /* Panel isi tab */
@@ -523,7 +534,7 @@ small,
 [data-baseweb="input"] input,
 [data-baseweb="textarea"] textarea {
   font-family: 'VT323', monospace !important;
-  font-size: 1.12rem !important;
+  font-size: 1.3rem !important;
   color: var(--pink-lt) !important;
   background-color: transparent !important;
   caret-color: var(--arc-yellow) !important;
@@ -543,7 +554,7 @@ small,
 [data-testid="stSlider"] > label,
 [data-testid="stRadio"] > label {
   font-family: 'VT323', monospace !important;
-  font-size: 1.05rem !important;
+  font-size: 1.18rem !important;
   color: var(--arc-cyan) !important;
   letter-spacing: 0.5px;
 }
@@ -552,7 +563,7 @@ small,
 [data-baseweb="select"] [data-baseweb="select-input"] > div,
 [data-baseweb="select"] [data-baseweb="select-input"] span {
   font-family: 'VT323', monospace !important;
-  font-size: 1.1rem !important;
+  font-size: 1.25rem !important;
   color: var(--pink-lt) !important;
 }
 
@@ -570,7 +581,7 @@ small,
 
 [data-baseweb="menu"] ul li {
   font-family: 'VT323', monospace !important;
-  font-size: 1.05rem !important;
+  font-size: 1.2rem !important;
   color: var(--pink-lt) !important;
   border-radius: 0 !important;
 }
@@ -584,7 +595,7 @@ small,
 /* Number input */
 [data-testid="stNumberInput"] input {
   font-family: 'VT323', monospace !important;
-  font-size: 1.1rem !important;
+  font-size: 1.25rem !important;
   color: var(--pink-lt) !important;
   background-color: var(--navy-dark) !important;
 }
@@ -602,7 +613,7 @@ small,
 [data-testid="stRadio"] label p,
 [data-testid="stRadio"] > div label {
   font-family: 'VT323', monospace !important;
-  font-size: 1.1rem !important;
+  font-size: 1.25rem !important;
   color: var(--pink-lt) !important;
 }
 
@@ -630,14 +641,14 @@ small,
 }
 
 [data-testid="stMetricLabel"] > div {
-  font-family: 'Press Start 2P', cursive !important;
-  font-size: 0.45rem !important;
+  font-family: 'VT323', monospace !important;
+  font-size: 1.12rem !important;
   color: var(--arc-cyan) !important;
 }
 
 [data-testid="stMetricValue"] > div {
-  font-family: 'Press Start 2P', cursive !important;
-  font-size: 1.1rem !important;
+  font-family: 'VT323', monospace !important;
+  font-size: 1.7rem !important;
   color: var(--arc-yellow) !important;
   text-shadow: 2px 2px 0 var(--black) !important;
 }
@@ -679,7 +690,7 @@ small,
 [data-testid="stCode"] pre,
 [data-testid="stCode"] code {
   font-family: 'JetBrains Mono', monospace !important;
-  font-size: 0.88rem !important;
+  font-size: 0.96rem !important;
   color: #7DF9AA !important;
   background-color: transparent !important;
   line-height: 1.55 !important;
@@ -693,7 +704,7 @@ code:not(pre code) {
   border: 1px solid var(--arc-purple) !important;
   padding: 0.1rem 0.35rem !important;
   border-radius: 0 !important;
-  font-size: 0.88rem !important;
+  font-size: 0.96rem !important;
 }
 
 /* ================================================================
@@ -708,7 +719,7 @@ code:not(pre code) {
 
 [data-testid="stAlert"] p {
   font-family: 'VT323', monospace !important;
-  font-size: 1.1rem !important;
+  font-size: 1.22rem !important;
   line-height: 1.55 !important;
 }
 
@@ -755,6 +766,7 @@ div[class*="stInfo"],
   border: 3px solid var(--black) !important;
   box-shadow: 4px 4px 0 var(--black) !important;
   border-radius: 0 !important;
+  background-color: var(--navy-dark) !important;
 }
 
 /* ================================================================
@@ -764,7 +776,7 @@ div[class*="stInfo"],
   border: 3px solid var(--black) !important;
   border-collapse: collapse !important;
   font-family: 'VT323', monospace !important;
-  font-size: 1.05rem !important;
+  font-size: 1.2rem !important;
   box-shadow: 5px 5px 0 var(--black) !important;
   width: 100% !important;
   margin: 1rem 0 !important;
@@ -773,11 +785,12 @@ div[class*="stInfo"],
 .stMarkdown th {
   background-color: var(--arc-purple) !important;
   color: var(--arc-yellow) !important;
-  font-family: 'Press Start 2P', cursive !important;
-  font-size: 0.38rem !important;
+  font-family: 'VT323', monospace !important;
+  font-size: 1.12rem !important;
+  font-weight: 700 !important;
   border: 2px solid var(--black) !important;
-  padding: 0.6rem 0.75rem !important;
-  text-shadow: 1px 1px 0 var(--black) !important;
+  padding: 0.7rem 0.8rem !important;
+  text-shadow: none !important;
 }
 
 .stMarkdown td {
@@ -804,8 +817,8 @@ div[class*="stInfo"],
 }
 
 [data-testid="stExpander"] summary {
-  font-family: 'Press Start 2P', cursive !important;
-  font-size: 0.46rem !important;
+  font-family: 'VT323', monospace !important;
+  font-size: 1.2rem !important;
   color: var(--arc-cyan) !important;
   padding: 0.7rem 1rem !important;
   line-height: 1.7 !important;
@@ -840,7 +853,7 @@ hr {
 [data-testid="stFileUploader"] label {
   font-family: 'VT323', monospace !important;
   color: var(--arc-cyan) !important;
-  font-size: 1.05rem !important;
+  font-size: 1.2rem !important;
 }
 
 /* ================================================================
@@ -861,8 +874,8 @@ hr {
 
 [data-testid="stImage"] figcaption {
   font-family: 'VT323', monospace !important;
-  font-size: 0.9rem !important;
-  color: #AAAACC !important;
+  font-size: 1.08rem !important;
+  color: #D0D7F4 !important;
   background-color: var(--navy-dark) !important;
   padding: 0.2rem 0.5rem !important;
   border-top: 2px solid var(--black) !important;
@@ -923,18 +936,23 @@ hr {
     border-width: 3px !important;
     box-shadow: 5px 5px 0 var(--black) !important;
   }
-  h1 { font-size: 0.78rem !important; }
-  h2 { font-size: 0.58rem !important; }
-  h3 { font-size: 0.50rem !important; }
+  h1 { font-size: 1rem !important; }
+  h2 { font-size: 0.78rem !important; }
+  h3 { font-size: 0.68rem !important; }
 
   [data-baseweb="tab"] {
-    font-size: 0.30rem !important;
-    padding: 0.5rem 0.45rem !important;
+    font-size: 1.05rem !important;
+    padding: 0.55rem 0.5rem !important;
   }
   .stButton > button {
-    font-size: 0.42rem !important;
+    font-size: 1.05rem !important;
     padding: 0.5rem 0.75rem !important;
     box-shadow: 3px 3px 0 var(--black) !important;
+  }
+
+  .stMarkdown th,
+  .stMarkdown td {
+    padding: 0.55rem 0.45rem !important;
   }
 }
 

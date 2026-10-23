@@ -3,8 +3,10 @@ base = "dark"
 primaryColor    = "#FFD93D"
 backgroundColor = "#0D0F2B"
 secondaryBackgroundColor = "#1B1F4B"
-textColor = "#EBD2E2"
+textColor = "#F4F6FF"
 font = "sans serif"
+dataframeBorderColor = "#6F7CA6"
+dataframeHeaderBackgroundColor = "#35265B"
 
 [browser]
 gatherUsageStats = false
