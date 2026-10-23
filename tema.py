@@ -760,29 +760,29 @@ div[class*="stInfo"],
 }
 
 /* ================================================================
-   DATAFRAME — Border pixel, header purple-kuning
+   TABEL — Teks timbul dua warna agar sel dan header tetap terbaca
    ================================================================ */
-[data-testid="stDataFrame"] > div {
+[data-testid="stTable"] {
   border: 3px solid var(--black) !important;
   box-shadow: 4px 4px 0 var(--black) !important;
   border-radius: 0 !important;
   background-color: var(--navy-dark) !important;
+  overflow-x: auto !important;
 }
 
-/* ================================================================
-   MARKDOWN TABLE (tabel di beranda)
-   ================================================================ */
-.stMarkdown table {
+.stMarkdown table,
+[data-testid="stTable"] table {
   border: 3px solid var(--black) !important;
   border-collapse: collapse !important;
   font-family: 'VT323', monospace !important;
   font-size: 1.2rem !important;
   box-shadow: 5px 5px 0 var(--black) !important;
-  width: 100% !important;
+  min-width: 100% !important;
   margin: 1rem 0 !important;
 }
 
-.stMarkdown th {
+.stMarkdown th,
+[data-testid="stTable"] th {
   background-color: var(--arc-purple) !important;
   color: var(--arc-yellow) !important;
   font-family: 'VT323', monospace !important;
@@ -790,18 +790,21 @@ div[class*="stInfo"],
   font-weight: 700 !important;
   border: 2px solid var(--black) !important;
   padding: 0.7rem 0.8rem !important;
-  text-shadow: none !important;
+  text-shadow: 1px 1px 0 var(--arc-cyan), 2px 2px 0 var(--black) !important;
 }
 
-.stMarkdown td {
+.stMarkdown td,
+[data-testid="stTable"] td {
   background-color: var(--navy-dark) !important;
   color: var(--pink-lt) !important;
   border: 2px solid #2A2F5B !important;
   padding: 0.5rem 0.75rem !important;
   font-family: 'VT323', monospace !important;
+  text-shadow: 1px 1px 0 var(--arc-cyan), 2px 2px 0 var(--black) !important;
 }
 
-.stMarkdown tr:hover td {
+.stMarkdown tr:hover td,
+[data-testid="stTable"] tr:hover td {
   background-color: rgba(106,76,156,0.22) !important;
 }
 
@@ -951,7 +954,9 @@ hr {
   }
 
   .stMarkdown th,
-  .stMarkdown td {
+  .stMarkdown td,
+  [data-testid="stTable"] th,
+  [data-testid="stTable"] td {
     padding: 0.55rem 0.45rem !important;
   }
 }

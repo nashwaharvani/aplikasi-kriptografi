@@ -88,15 +88,12 @@ def halaman_klasik():
             st.code(hasil, language=None)
             st.download_button("Unduh hasil (.txt)", hasil, file_name="hasil_klasik.txt")
             with st.expander("Lihat langkah perhitungan"):
-                st.dataframe(
-                    pd.DataFrame(klasik.rincian_shift(jenis, pesan, kunci, hasil, dek)),
-                    hide_index=True,
-                )
+                st.table(pd.DataFrame(klasik.rincian_shift(jenis, pesan, kunci, hasil, dek)))
             if jenis == "Vigenère":
                 with st.expander("Lihat tabula recta (tabel Vigenère)"):
                     huruf, tabel = klasik.tabula_recta()
                     st.caption("Baris = huruf kunci, kolom = huruf plainteks, isi sel = huruf cipherteks.")
-                    st.dataframe(pd.DataFrame(tabel, index=huruf, columns=huruf))
+                    st.table(pd.DataFrame(tabel, index=huruf, columns=huruf))
 
     # ---------- Playfair
     with tab_pf:
@@ -115,10 +112,7 @@ def halaman_klasik():
         else:
             m = klasik.matriks_playfair(kunci)
             st.markdown("**Bujursangkar kunci 5×5**")
-            st.dataframe(
-                pd.DataFrame([m[i * 5:(i + 1) * 5] for i in range(5)], columns=[1, 2, 3, 4, 5]),
-                hide_index=True,
-            )
+            st.table(pd.DataFrame([m[i * 5:(i + 1) * 5] for i in range(5)], columns=[1, 2, 3, 4, 5]))
             st.markdown("**Pesan dibagi menjadi bigram**")
             st.code(" ".join(klasik.pasangan_playfair(pesan, dek)), language=None)
             st.markdown("**Hasil**")
@@ -146,7 +140,7 @@ def halaman_modern():
             dec = modern.xor_cipher(enc, kunci.encode())
             st.success(f"XOR sekali lagi dengan kunci yang sama mengembalikan: {dec.decode(errors='replace')}")
             with st.expander("Lihat XOR per byte (16 byte pertama)"):
-                st.dataframe(pd.DataFrame(modern.rincian_xor(pesan.encode(), kunci.encode())), hide_index=True)
+                st.table(pd.DataFrame(modern.rincian_xor(pesan.encode(), kunci.encode())))
             st.caption("Cipher XOR dengan kunci pendek tidak aman karena kunci berulang. Ia hanya fondasi untuk stream cipher.")
 
     with tab_av:
@@ -279,7 +273,7 @@ def halaman_aes():
                     }
             rincian = st.session_state.get("aes_rincian")
             if rincian:
-                st.dataframe(pd.DataFrame(rincian.items(), columns=["Komponen", "Nilai (hex)"]), hide_index=True)
+                st.table(pd.DataFrame(rincian.items(), columns=["Komponen", "Nilai (hex)"]))
         with kanan:
             st.subheader("Dekripsi")
             paket_hex = st.text_area("Paket terenkripsi (hex: salt, IV/nonce, tag, cipherteks)", key="aes_paket_in")
