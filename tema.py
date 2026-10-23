@@ -538,8 +538,16 @@ small,
   box-shadow: 5px 5px 0 var(--arc-cyan) !important;
 }
 
+[data-testid="stSelectbox"] [role="group"]:has(> [role="combobox"]) {
+  border: 3px solid var(--arc-cyan) !important;
+  border-radius: 0 !important;
+  background-color: #121738 !important;
+  box-shadow: 5px 5px 0 var(--arc-cyan) !important;
+}
+
 [data-baseweb="input"] input,
 [data-testid="stTextInputRootElement"] input,
+[data-testid="stSelectbox"] [role="combobox"],
 [data-baseweb="textarea"] textarea,
 [data-testid="stTextAreaRootElement"] textarea {
   font-family: 'VT323', monospace !important;
@@ -551,12 +559,16 @@ small,
 
 [data-baseweb="input"]:focus-within,
 [data-testid="stTextInputRootElement"]:focus-within,
+[data-testid="stSelectbox"] [role="group"]:has(> [role="combobox"]):focus-within,
+[data-testid="stSelectbox"] [role="group"]:has(> [role="combobox"][aria-expanded="true"]),
 [data-baseweb="textarea"]:focus-within {
   border-color: var(--arc-yellow) !important;
   box-shadow: 3px 3px 0 var(--arc-yellow) !important;
 }
 
-[data-testid="stTextInputRootElement"]:focus-within {
+[data-testid="stTextInputRootElement"]:focus-within,
+[data-testid="stSelectbox"] [role="group"]:has(> [role="combobox"]):focus-within,
+[data-testid="stSelectbox"] [role="group"]:has(> [role="combobox"][aria-expanded="true"]) {
   box-shadow: 5px 5px 0 var(--arc-yellow) !important;
 }
 
