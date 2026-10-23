@@ -532,7 +532,8 @@ small,
 }
 
 [data-baseweb="input"] input,
-[data-baseweb="textarea"] textarea {
+[data-baseweb="textarea"] textarea,
+[data-testid="stTextAreaRootElement"] textarea {
   font-family: 'VT323', monospace !important;
   font-size: 1.3rem !important;
   color: var(--pink-lt) !important;
@@ -552,7 +553,16 @@ small,
   box-shadow: 5px 5px 0 var(--arc-cyan) !important;
 }
 
-[data-baseweb="textarea"]:focus-within {
+[data-testid="stTextAreaRootElement"] {
+  border: 3px solid var(--arc-cyan) !important;
+  border-radius: 0 !important;
+  background-color: #121738 !important;
+  box-shadow: 5px 5px 0 var(--arc-cyan) !important;
+}
+
+[data-baseweb="textarea"]:focus-within,
+[data-testid="stTextAreaRootElement"]:focus-within {
+  border-color: var(--arc-yellow) !important;
   box-shadow: 5px 5px 0 var(--arc-yellow) !important;
 }
 
