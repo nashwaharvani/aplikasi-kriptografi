@@ -13,17 +13,19 @@ from PIL import Image
 from modules import aes_mode as aes
 from modules import klasik, modern
 from modules import rc4 as rc4m
+from tema import BERANDA_HTML, SIDEBAR_LOGO_HTML, terapkan_tema
 
 NAMA = "Nashwa Harvani Rubiantono"
 NIM = "A11.2024.15544"
 
 st.set_page_config(page_title="CryptoLab", page_icon="🔐", layout="wide")
+terapkan_tema()  # Tema Arcade Retro Pixel — lihat tema.py
 
 
 # ============================================================ Beranda
 def halaman_beranda():
-    st.title("CryptoLab")
-    st.subheader("Evolusi kriptografi dari klasik ke modern")
+    # ── Header arcade: banner + judul + balon pixel ──────────────
+    st.markdown(BERANDA_HTML, unsafe_allow_html=True)
     st.write(
         "CryptoLab adalah laboratorium mini untuk mencoba langsung algoritma kriptografi "
         "yang dipelajari di mata kuliah Kriptografi. Setiap modul mengikuti satu pertemuan "
@@ -370,15 +372,16 @@ def halaman_aes():
 
 # ============================================================ Navigasi
 HALAMAN = {
-    "Beranda": halaman_beranda,
-    "Cipher klasik": halaman_klasik,
-    "XOR, avalanche, PRNG": halaman_modern,
-    "Stream cipher RC4": halaman_rc4,
-    "AES dan mode operasi": halaman_aes,
+    "🏠  BERANDA": halaman_beranda,
+    "🕹️  LEVEL 1 · Cipher Klasik": halaman_klasik,
+    "💡  LEVEL 2 · XOR & Avalanche": halaman_modern,
+    "🔓  LEVEL 3 · Stream RC4": halaman_rc4,
+    "🔐  LEVEL 4 · AES": halaman_aes,
 }
 
 with st.sidebar:
-    st.markdown("### CryptoLab")
+    # Logo arcade di atas daftar menu
+    st.markdown(SIDEBAR_LOGO_HTML, unsafe_allow_html=True)
     pilihan = st.radio("Modul", list(HALAMAN), label_visibility="collapsed")
     st.divider()
     st.caption(f"{NAMA}  \n{NIM}  \nTeknik Informatika, UDINUS")
